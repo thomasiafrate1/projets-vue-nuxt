@@ -28,13 +28,15 @@
 import { ref, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCart } from '../../../composables/useCart'
+import { useRuntimeConfig } from '#imports'
 
 const route = useRoute()
 const { addToCart } = useCart()
 const product = ref(null)
 
 onMounted(async () => {
-  const res = await fetch('products.json')
+  const base = useRuntimeConfig().app.baseURL || '/'
+  const res = await fetch(base + 'products.json')
   const list = await res.json()
   product.value = list.find(p => String(p.id) === String(route.params.id))
 })

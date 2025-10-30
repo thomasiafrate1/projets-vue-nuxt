@@ -1,5 +1,8 @@
 <template>
   <div class="container">
+    <div style="margin-bottom:12px">
+      <a href="/" class="btn" style="background:#475569">← Retour aux projets</a>
+    </div>
     <header class="header">
       <h1>Mini e-commerce</h1>
       <CartDrawer />
@@ -20,6 +23,7 @@
 
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { useRuntimeConfig } from '#imports'
 import SearchBar from '../../components/SearchBar.vue'
 import ProductList from '../../components/ProductList.vue'
 import CartDrawer from '../../components/CartDrawer.vue'
@@ -30,10 +34,10 @@ const category = ref('')
 const sort = ref('')
 
 onMounted(async () => {
-  const res = await fetch('products.json')
+  const base = useRuntimeConfig().app.baseURL || '/'
+  const res = await fetch(base + 'products.json')
   products.value = await res.json()
 })
-
 const categories = computed(() =>
   Array.from(new Set(products.value.map(p => p.category)))
 )
