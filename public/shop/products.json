@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Cargo Regular cargo pant Beige Carhartt wip",
+    "price": 49.99,
+    "image": "cargo1.png",
+    "category": "Pantalons",
+    "description": "Pantalon cargo beige en toile robuste, coupe droite et poches latérales pratiques. Style utilitaire intemporel signé Carhartt WIP."
+  },
+  {
+    "id": 2,
+    "name": "Cargo Regular cargo pant Kaki Carhartt wip",
+    "price": 49.99,
+    "image": "cargo2.png",
+    "category": "Pantalons",
+    "description": "Cargo kaki classique avec poches multiples, idéal pour un look décontracté et fonctionnel. Tissu résistant, confort durable."
+  },
+  {
+    "id": 3,
+    "name": "Pull marin bleu denim",
+    "price": 195.0,
+    "image": "pull1.webp",
+    "category": "Pulls",
+    "description": "Pull marin en laine mélangée, coloris bleu denim, col rond et finitions côtelées. Un basique élégant inspiré du vestiaire nautique."
+  },
+  {
+    "id": 4,
+    "name": "Pull en maille Bleu foncé",
+    "price": 95.0,
+    "image": "pull2.webp",
+    "category": "Pulls",
+    "description": "Pull en maille épaisse bleu foncé, doux et chaud, parfait pour la mi-saison. Confort et simplicité réunis."
+  },
+  {
+    "id": 5,
+    "name": "Casquette City sidepatch n Multicolore New era",
+    "price": 55.0,
+    "image": "casquette1.png",
+    "category": "Casquettes",
+    "description": "Casquette New Era multicolore avec patch latéral brodé. Visière incurvée et ajustement arrière pour un look streetwear affirmé."
+  },
+  {
+    "id": 6,
+    "name": "Casquette Charles Leclerc Scuderia Ferrari 2025 Team",
+    "price": 98.0,
+    "image": "casquette2.avif",
+    "category": "Casquettes",
+    "description": "Casquette officielle Ferrari F1 2025 de Charles Leclerc. Logo Scuderia brodé, rouge iconique et finitions premium."
+  },
+  {
+    "id": 7,
+    "name": "Chaussettes Qui Courent Vite",
+    "price": 10.0,
+    "image": "chaussette1.webp",
+    "category": "Chaussettes",
+    "description": "Paire de chaussettes blanches respirantes, renforcées aux talons et pointes. Idéales pour le sport ou la détente."
+  },
+  {
+    "id": 8,
+    "name": "Chaussettes Grises Basiques",
+    "price": 8.2,
+    "image": "chaussette2.webp",
+    "category": "Chaussettes",
+    "description": "Chaussettes grises en coton doux, confortables et simples. L’incontournable du tiroir à chaussettes."
+  }
+]

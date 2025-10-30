@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mes projets Vue & Nuxt</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ffe5ec, #f6d6ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .wrap { text-align: center; }
+    h1 { margin-bottom: 2rem; }
+    .cards {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: white;
+      border: 2px solid black;
+      border-radius: 12px;
+      padding: 1.5rem;
+      width: 220px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .card a {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Choisissez un projet</h1>
+    <div class="cards">
+      <div class="card">
+        <h2>Mini e-commerce</h2>
+        <a href="/shop/">Ouvrir</a>
+      </div>
+      <div class="card">
+        <h2>Gestion d'habitudes</h2>
+        <a href="/habits/">Ouvrir</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

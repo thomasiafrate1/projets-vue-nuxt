@@ -1,0 +1,14 @@
+{
+  "name": "projets-vue-nuxt",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:habits && npm run build:shop",
+
+    "build:habits": "cd apps/gestion-habitude && npm ci && npm run build && shx rm -rf ../../public/habits && shx mkdir -p ../../public/habits && shx cp -r dist/* ../../public/habits/",
+
+    "build:shop": "cd apps/mini-ecommerce && npm ci && npx nuxi generate && shx rm -rf ../../public/shop && shx mkdir -p ../../public/shop && shx cp -r .output/public/* ../../public/shop/"
+  },
+  "devDependencies": {
+    "shx": "^0.4.0"
+  }
+}
