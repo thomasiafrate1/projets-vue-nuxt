@@ -1,10 +1,9 @@
 <template>
   <div>
+    <a href="/" class="btn" style="background:#475569;padding:6px 10px;border-radius:8px;color:#fff;text-decoration:none">← Retour aux projets</a>
     <header class="header">
       <div class="header-inner">
         <h1>Gestionnaire d'Habitudes</h1>
-        <a href="/" class="btn" style="background:#475569;padding:6px 10px;border-radius:8px;color:#fff;text-decoration:none">← Retour aux projets</a>
-
       </div>
     </header>
 

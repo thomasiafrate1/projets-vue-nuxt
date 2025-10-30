@@ -1,14 +1,14 @@
 <template>
   <div class="container" v-if="product">
-    <NuxtLink to="/" class="btn" style="background:#475569;margin-bottom:12px">← Retour</NuxtLink>
+    <a href="/shop/" class="btn" style="background:#475569;margin-bottom:12px">← Retour</a>
+
     <div class="grid" style="grid-template-columns:1fr; gap:24px">
-      <div class="image-box">
-        <img
-          :src="product.image.startsWith('http') ? product.image : '/' + product.image"
-          :alt="product.name"
-          class="product-image"
-        />
-      </div>
+      <img
+        :src="imgSrc"
+        :alt="product.name"
+        class="product-image"
+        style="width:500px; border-radius:12px; max-width:720px; object-fit:cover"
+      />
 
       <div class="card">
         <h1 style="margin:0 0 8px">{{ product.name }}</h1>
@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useCart } from '../../../composables/useCart'
 import { useRuntimeConfig } from '#imports'
@@ -40,22 +40,13 @@ onMounted(async () => {
   const list = await res.json()
   product.value = list.find(p => String(p.id) === String(route.params.id))
 })
+
+// src correct: http absolu tel quel, sinon prefixé par baseURL (/shop/)
+const imgSrc = computed(() => {
+  const p = product.value
+  if (!p) return ''
+  const src = p.image || ''
+  if (/^https?:\/\//i.test(src)) return src
+  return (useRuntimeConfig().app.baseURL || '/') + src.replace(/^\/+/, '')
+})
 </script>
-
-<style scoped>
-.image-box {
-  display: flex;
-  justify-content: center;
-}
-
-.product-image {
-  width: 500px;
-  max-width: 720px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 2px solid #000;
-  background: #fff;
-  padding: 8px;
-  box-sizing: border-box;
-}
-</style>
