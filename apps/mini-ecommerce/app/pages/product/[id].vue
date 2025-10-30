@@ -41,7 +41,6 @@ onMounted(async () => {
   product.value = list.find(p => String(p.id) === String(route.params.id))
 })
 
-// src correct: http absolu tel quel, sinon prefixé par baseURL (/shop/)
 const imgSrc = computed(() => {
   const p = product.value
   if (!p) return ''
@@ -50,3 +49,21 @@ const imgSrc = computed(() => {
   return (useRuntimeConfig().app.baseURL || '/') + src.replace(/^\/+/, '')
 })
 </script>
+
+<style scoped>
+.image-box {
+  display: flex;
+  justify-content: center;
+}
+
+.product-image {
+  width: 500px;
+  max-width: 720px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #000;
+  background: #fff;
+  padding: 8px;
+  box-sizing: border-box;
+}
+</style>
