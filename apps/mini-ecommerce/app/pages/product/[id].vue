@@ -3,12 +3,14 @@
     <a href="/shop/" class="btn" style="background:#475569;margin-bottom:12px">← Retour</a>
 
     <div class="grid" style="grid-template-columns:1fr; gap:24px">
-      <img
-        :src="imgSrc"
-        :alt="product.name"
-        class="product-image"
-        style="width:500px; border-radius:12px; max-width:720px; object-fit:cover"
-      />
+      <!-- on entoure l’image dans une div centrée -->
+      <div class="image-wrapper">
+        <img
+          :src="imgSrc"
+          :alt="product.name"
+          class="product-image"
+        />
+      </div>
 
       <div class="card">
         <h1 style="margin:0 0 8px">{{ product.name }}</h1>
@@ -51,9 +53,11 @@ const imgSrc = computed(() => {
 </script>
 
 <style scoped>
-.image-box {
+.image-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .product-image {
