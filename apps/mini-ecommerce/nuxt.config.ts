@@ -1,9 +1,15 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
-  compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  app: {
-    baseURL: '/shop/'
-  },
-  ssr: false
+  app: { baseURL: '/shop/' },
+  ssr: false,
+  plugins: [
+    'plugins/hello.client',
+    'plugins/ga.client'
+  ],
+  runtimeConfig: {
+    public: {
+      gaId: process.env.NUXT_PUBLIC_GA_ID || ''
+    }
+  }
 })

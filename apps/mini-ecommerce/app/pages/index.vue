@@ -41,6 +41,8 @@ onMounted(async () => {
 const categories = computed(() =>
   Array.from(new Set(products.value.map(p => p.category)))
 )
+console.log('GA ID:', useRuntimeConfig().public.gaId)
+
 
 const filtered = computed(() => {
   let out = products.value.filter(p =>
